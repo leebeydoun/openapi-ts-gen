@@ -1,56 +1,5 @@
 {
-  "version": "0.1.0",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "play": "node ./dist/index.js",
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
-  },
-  "peerDependencies": {},
-  "prettier": {
-    "printWidth": 100,
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 4
-  },
-  "name": "openapi-ts-gen",
-  "author": "Lee",
-  "module": "dist/openapi-ts-gen.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/openapi-ts-gen.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/openapi-ts-gen.esm.js",
-      "limit": "10 KB"
-    }
-  ],
-  "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.7.0",
-    "@types/json-schema-faker": "^0.5.1",
-    "http-status-codes": "^2.1.4",
-    "size-limit": "^4.7.0",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.0.3",
-    "typescript": "^4.0.5"
-  },
-  "dependencies": {
-    "@apidevtools/swagger-parser": "^10.0.2",
-    "json-schema-faker": "^0.5.0-rcv.29"
-  }
+  "name": "root",
+  "private": true,
+  "workspaces": ["packages/*"]
 }

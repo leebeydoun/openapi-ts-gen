@@ -1,0 +1,56 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "../../dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "../../dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "play": "node ../../dist/index.js",
+    "start": "../../node_modules/.bin/tsdx watch",
+    "build": "../../node_modules/.bin/tsdx build",
+    "test": "../../node_modules/.bin/tsdx test",
+    "lint": "../../node_modules/.bin/tsdx lint",
+    "prepare": "../../node_modules/.bin/tsdx build",
+    "size": "../../node_modules/.bin/size-limit",
+    "analyze": "../../node_modules/.bin/size-limit --why"
+  },
+  "peerDependencies": {},
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4
+  },
+  "name": "@openapi-ts-gen/mockgen",
+  "author": "Lee",
+  "module": "../../dist/openapi-ts-gen.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/openapi-ts-gen.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/openapi-ts-gen.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.7.0",
+    "@types/json-schema-faker": "^0.5.1",
+    "http-status-codes": "^2.1.4",
+    "size-limit": "^4.7.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.0.2",
+    "json-schema-faker": "^0.5.0-rcv.29"
+  }
+}
